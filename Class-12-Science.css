@@ -1,0 +1,228 @@
+/* ==========================================
+   Lakshya Academy - Class 12 Science
+   Premium CSS
+========================================== */
+
+/* HERO */
+
+.science-hero{
+background:
+linear-gradient(135deg,rgba(6,18,55,.94),rgba(8,60,150,.88)),
+url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:120px 0 80px;
+position:relative;
+overflow:hidden;
+}
+
+.science-hero::before{
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+background:rgba(0,255,255,.08);
+border-radius:50%;
+top:-150px;
+right:-120px;
+filter:blur(80px);
+}
+
+.science-hero::after{
+content:"";
+position:absolute;
+width:350px;
+height:350px;
+background:rgba(255,122,0,.12);
+border-radius:50%;
+bottom:-120px;
+left:-100px;
+filter:blur(60px);
+}
+
+.science-grid{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:60px;
+align-items:center;
+position:relative;
+z-index:2;
+}
+
+.science-grid h1{
+font-family:'Poppins',sans-serif;
+font-size:58px;
+line-height:1.08;
+margin:20px 0;
+}
+
+.science-grid p{
+font-size:20px;
+line-height:1.8;
+color:#D7E7FF;
+margin-bottom:35px;
+}
+
+.science-image img{
+width:100%;
+border-radius:30px;
+box-shadow:0 30px 60px rgba(0,0,0,.45);
+transition:.5s;
+}
+
+.science-image img:hover{
+transform:scale(1.03);
+}
+
+/* Floating Cards */
+
+.hero-stats{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.hero-stats .stat-card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.12);
+border-radius:22px;
+padding:22px;
+min-width:170px;
+transition:.35s;
+}
+
+.hero-stats .stat-card:hover{
+transform:translateY(-8px);
+border-color:#00E5FF;
+}
+
+.hero-stats h2{
+font-size:42px;
+color:#00E5FF;
+}
+
+/* Science Accent */
+
+.science-hero .btn{
+box-shadow:0 18px 40px rgba(255,122,0,.35);
+}
+
+.science-hero .btn-outline{
+border-color:rgba(255,255,255,.35);
+}
+
+/* Demo Form */
+
+.demo-box{
+max-width:760px;
+margin:auto;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(20px);
+padding:40px;
+border-radius:28px;
+border:1px solid rgba(255,255,255,.1);
+box-shadow:0 25px 60px rgba(0,0,0,.25);
+}
+
+.demo-box form{
+display:grid;
+gap:18px;
+}
+
+.demo-box input,
+.demo-box select{
+padding:18px;
+border:none;
+border-radius:16px;
+font-size:16px;
+background:rgba(255,255,255,.95);
+outline:none;
+transition:.3s;
+}
+
+.demo-box input:focus,
+.demo-box select:focus{
+box-shadow:0 0 0 3px rgba(0,229,255,.35);
+}
+
+/* Faculty Hover */
+
+.faculty-card{
+overflow:hidden;
+}
+
+.faculty-card img{
+transition:.5s;
+}
+
+.faculty-card:hover img{
+transform:scale(1.08);
+}
+
+/* Floating Animation */
+
+@keyframes scienceFloat{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0);}
+
+}
+
+.hero-stats .stat-card{
+animation:scienceFloat 4s ease-in-out infinite;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.science-grid{
+grid-template-columns:1fr;
+}
+
+.science-image{
+order:-1;
+}
+
+.science-grid h1{
+font-size:44px;
+}
+
+}
+
+@media(max-width:768px){
+
+.science-hero{
+padding-top:90px;
+}
+
+.science-grid h1{
+font-size:36px;
+}
+
+.science-grid p{
+font-size:17px;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.hero-stats{
+flex-direction:column;
+}
+
+.hero-stats .stat-card{
+width:100%;
+}
+
+.demo-box{
+padding:24px;
+}
+
+}
