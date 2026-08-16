@@ -362,3 +362,312 @@ font-size:24px;
 }
 
 }
+/* =========================================
+   PREMIUM SECTIONS - PART 2
+   Add below existing CSS
+=========================================*/
+
+/* Services */
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.service-card{
+background:rgba(255,255,255,.06);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:24px;
+overflow:hidden;
+transition:.35s;
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 50px rgba(255,122,0,.25);
+border-color:#FF7A00;
+}
+
+.service-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+transition:.5s;
+}
+
+.service-card:hover img{
+transform:scale(1.08);
+}
+
+.service-card h3{
+padding:20px 22px 10px;
+font-size:24px;
+font-family:'Poppins',sans-serif;
+}
+
+.service-card p{
+padding:0 22px 24px;
+color:#D5E3FF;
+line-height:1.6;
+}
+
+/* Results */
+
+.result-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.result-card{
+text-align:center;
+padding:35px;
+background:rgba(255,255,255,.05);
+border-radius:24px;
+border:1px solid rgba(255,255,255,.08);
+transition:.35s;
+}
+
+.result-card:hover{
+transform:translateY(-8px);
+border-color:#FFD166;
+}
+
+.result-card h2{
+font-size:52px;
+color:#FFD166;
+margin-bottom:10px;
+}
+
+.result-card p{
+color:#C7D8F5;
+}
+
+/* Faculty */
+
+.faculty-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.faculty-card{
+background:#0D2A63;
+border-radius:24px;
+overflow:hidden;
+text-align:center;
+transition:.35s;
+}
+
+.faculty-card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 50px rgba(0,0,0,.35);
+}
+
+.faculty-card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.faculty-card h3{
+margin:22px 0 8px;
+font-size:24px;
+}
+
+.faculty-card p{
+padding-bottom:25px;
+color:#C7D8F5;
+}
+
+/* Testimonials */
+
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.testimonial-card{
+background:rgba(255,255,255,.06);
+padding:30px;
+border-radius:24px;
+border:1px solid rgba(255,255,255,.08);
+font-size:22px;
+color:#FFD166;
+transition:.35s;
+}
+
+.testimonial-card:hover{
+transform:translateY(-8px);
+}
+
+.testimonial-card p{
+font-size:16px;
+line-height:1.7;
+color:#E5EEFF;
+margin:18px 0;
+}
+
+.testimonial-card strong{
+color:#fff;
+}
+
+/* Branches */
+
+.branch-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.branch-card{
+background:#0D2A63;
+border-radius:24px;
+overflow:hidden;
+transition:.35s;
+}
+
+.branch-card:hover{
+transform:translateY(-10px);
+}
+
+.branch-card img{
+width:100%;
+height:240px;
+object-fit:cover;
+transition:.5s;
+}
+
+.branch-card:hover img{
+transform:scale(1.05);
+}
+
+.branch-card h3{
+padding:22px 24px 8px;
+font-size:24px;
+}
+
+.branch-card p{
+padding:0 24px 24px;
+color:#D5E3FF;
+}
+
+/* CTA */
+
+.cta-section{
+padding:90px 0;
+text-align:center;
+background:
+linear-gradient(135deg,#0B3D91,#1E5FD8);
+position:relative;
+overflow:hidden;
+}
+
+.cta-section:before{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+background:rgba(255,122,0,.15);
+border-radius:50%;
+top:-150px;
+right:-100px;
+filter:blur(40px);
+}
+
+.cta-section h2{
+font-size:48px;
+margin-bottom:18px;
+}
+
+.cta-section p{
+color:#E5EEFF;
+max-width:700px;
+margin:0 auto 30px;
+}
+
+/* Footer */
+
+.footer{
+background:#04132F;
+padding:70px 0;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:40px;
+}
+
+.footer h3{
+margin-bottom:18px;
+color:#FFD166;
+}
+
+.footer p{
+color:#BFD3F8;
+line-height:1.8;
+}
+
+/* Floating Buttons */
+
+.floating-call,
+.floating-whatsapp{
+position:fixed;
+right:22px;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+text-decoration:none;
+color:#fff;
+z-index:9999;
+box-shadow:0 15px 35px rgba(0,0,0,.3);
+transition:.3s;
+}
+
+.floating-call{
+bottom:100px;
+background:#FF7A00;
+}
+
+.floating-whatsapp{
+bottom:25px;
+background:#25D366;
+}
+
+.floating-call:hover,
+.floating-whatsapp:hover{
+transform:scale(1.1);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.cta-section h2{
+font-size:34px;
+}
+
+.service-card img,
+.branch-card img{
+height:190px;
+}
+
+.faculty-card img{
+height:250px;
+}
+
+}
+
